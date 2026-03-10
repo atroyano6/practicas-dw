@@ -1,0 +1,36 @@
+     body {
+            background-color: grey;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* Une los bordes para que se vean como una sola línea */
+            background-color: rgb(61, 60, 60);
+            color: white;
+            width: 60%;
+            height: 400px;
+            font-family: "Inconsolata", monospace;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+
+        }
+
+        table, th, td {
+            border: 5px solid rgb(175, 174, 174);
+            /* Bordes externos e internos */
+            border-style: dotted;
+        }
+
+        th, td {
+            padding: 8px;
+            /* Espacio interno */
+            text-align: center;
+            /* Alineación del texto */
+        }
+
+        .left-aling {
+            text-align: left;
+        }

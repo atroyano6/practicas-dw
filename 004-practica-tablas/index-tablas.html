@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla horaria con estilo.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <th>HORA</th>
+            <th>LUNES</th>
+            <th>MARTES</th>
+            <th>MIERCOLES</th>
+            <th>JUEVES</th>
+            <th>VIERNES</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="left-aling">08.00</th>
+                <th colspan="5">Desayuno</th>
+            </tr>
+            <tr>
+                <th rowspan="2" class="left-aling">10.00</th>
+                <th rowspan="2" class="left-aling">Yoga</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Compras</th>
+
+            </tr>
+            <tr>
+                <th colspan="3">Paseo por el parque</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th class="left-aling">12.00</th>
+                <th rowspan="2">Comida<br>con<br>amigos</th>
+                <th>Trabajo</th>
+                <th>Trabajo</th>
+                <th>Amigos</th>
+                <th></th>
+
+            </tr>
+            <tr>
+                <th class="left-aling">14.00</th>
+                <th colspan="4">Comida en casa</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
