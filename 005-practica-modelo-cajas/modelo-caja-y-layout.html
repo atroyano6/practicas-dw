@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caja + layout</title>
+</head>
+<body>
+    <!-- # Modelo de caja + layout
+Tu objetivo es crear un recuadro con título y texto recortado.
+ 
+1. Crea un `<div>` con clase caja que tenga:
+    - un ancho de 220px
+    - padding de 15px
+    - margen de 20px
+    - borde de 2px sólido (el color que quieras)
+    - un fondo claro
+ 
+2. Dentro del `<div>`, añade:
+    - un `<span>` con clase titulo que diga "Título"
+    - un `<p>` con clase texto que contenga un texto largo (3–4 frases)
+ 
+3. Aplica a `.titulo`:
+    - `display: block`
+    - `font-weight: bold`
+    - `margin-bottom: 10px`
+ 
+4. Aplica a `.texto`:
+    - una altura fija de 60px
+    - `overflow: auto`
+    - un borde de 1px
+    - `padding: 5px`
+    - un fondo blanco-->
+    <div class="caja">
+        <span class="titulo">Título</span>
+        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
+    </div>
+    <style>
+        .caja {
+            width: 220px;
+            padding: 15px;
+            margin: 20px;
+            border: 2px solid #070707; 
+            background-color: #a16d9f; 
+        }
+        .titulo {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .texto {
+            height: 60px;
+            overflow: auto;
+            border: 1px solid #080808; 
+            padding: 5px;
+            background-color: white;
+        }
+    </style>    
+</body>
+</html>
