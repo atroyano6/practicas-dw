@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiApp</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        /* Barra: negro claro, horizontal y centrada */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 10px 24px;
+            background-color: #2b2b2b;
+            /* negro claro */
+            color: #ffffff;
+            border-radius: 16px;
+            /* bordes redondeados para toda la barra */
+            flex-wrap: wrap;
+        }
+
+        /* Grupos generales */
+        .grp {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Marca a la izquierda */
+        .grp--brand strong {
+            font-size: 1.1rem;
+        }
+
+        /* Grupo buscador: pastilla gris clara centrada */
+        .grp--search {
+            flex: 1;
+            /* empuja lo demás hacia la derecha */
+            background-color: #e5e5e5;
+            /* gris claro */
+            padding: 4px 8px;
+            border-radius: 999px;
+            /* forma de píldora */
+        }
+
+        /* Input de búsqueda dentro del “buscador” */
+        .grp--search input[type="search"] {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 4px 8px;
+            color: #111827;
+            min-width: 160px;
+        }
+
+        /* Botón Atajos dentro del buscador, estilo ghost */
+        .grp--search .btn--ghost {
+            border-radius: 999px;
+            padding: 4px 10px;
+        }
+
+        /* Botones base: azules, redondeados */
+        .btn {
+            border: none;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background-color: #1d4ed8;
+            /* azul estándar */
+            color: #ffffff;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn:hover {
+            background-color: #1e40af;
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Botones ghost: fondo transparente, borde o texto claro */
+        .btn--ghost {
+            background-color: transparent;
+            color: #e5e7eb;
+            border: 1px solid rgba(229, 231, 235, 0.4);
+        }
+
+        .btn--ghost:hover {
+            background-color: rgba(229, 231, 235, 0.1);
+        }
+
+        /* Grupos de botones principales y secundarios */
+        .grp--primary,
+        .grp--secondary {
+            gap: 8px;
+        }
+
+        /* Usuario a la derecha */
+        .grp--user {
+            margin-left: 8px;
+            gap: 8px;
+        }
+
+        /* Avatar redondo */
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            object-fit: cover;
+        }
+
+        .grp--secondary,
+        .grp--user {
+            margin-left: auto;
+            /* se empujan hacia la derecha */
+        }
+
+        /* Para favorecer que bajen juntos cuando no haya espacio */
+        .grp--secondary,
+        .grp--user {
+            flex-shrink: 0;
+            /* que no se encojan, así pasan a la siguiente línea */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="toolbar">
+        <div class="grp grp--brand">
+            <strong>MiApp</strong>
+        </div>
+        <div class="grp grp--search">
+            <input type="search" placeholder="Buscar…" aria-label="Buscar" />
+            <button class="btn btn--ghost">Atajos</button>
+        </div>
+        <div class="grp grp--primary">
+            <button class="btn">Nuevo</button>
+            <button class="btn">Guardar</button>
+        </div>
+        <div class="grp grp--secondary">
+            <button class="btn btn--ghost">Compartir</button>
+            <button class="btn btn--ghost">Exportar</button>
+        </div>
+        <div class="grp grp--user">
+            <img class="avatar" src="https://i.pravatar.cc/40?img=5" alt="Usuario" />
+            <span>Selma</span>
+        </div>
+    </nav>
+</body>
+
+</html>
