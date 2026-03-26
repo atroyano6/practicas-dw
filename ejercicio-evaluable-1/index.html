@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla y formulario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="contenedor">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Fecha de nacimiento</th>
+          <th>Género</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ana López</td>
+          <td>ana@example.com</td>
+          <td>1995-04-10</td>
+          <td>Femenino</td>
+        </tr>
+        <tr>
+          <td>Carlos Pérez</td>
+          <td>carlos@example.com</td>
+          <td>1990-09-22</td>
+          <td>Masculino</td>
+        </tr>
+        <tr>
+          <td>María García</td>
+          <td>maria@example.com</td>
+          <td>2000-01-15</td>
+          <td>Otro</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form>
+      <div class="form-grupo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+      </div>
+
+      <div class="form-grupo">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="form-grupo">
+        <label for="fecha">Fecha de nacimiento</label>
+        <input type="date" id="fecha" name="fecha">
+      </div>
+
+      <div class="form-grupo">
+        <label for="genero">Género</label>
+        <select id="genero" name="genero">
+          <option value="">Seleccione una opción</option>
+          <option value="femenino">Femenino</option>
+          <option value="masculino">Masculino</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+</body>
+</html>
