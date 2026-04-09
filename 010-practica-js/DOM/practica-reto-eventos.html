@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>0</div>
+</body>
+
+</html>
+<script>
+    //Div cuadrado
+    //Dentro del div aparece el numero 0
+    //Cada vez que el raton entra al div
+    //El cero se incrementa
+
+
+    // 1. Obtener el elemento div por su selector
+    const div = document.querySelector('div');
+
+    // 2. Variable para almacenar el contador
+    let contador = 0;
+
+    // 3. Agregar el evento mouseover
+    div.addEventListener('mouseover', function () {
+        // Incrementar el contador
+        contador++;
+        // Actualizar el texto dentro del div
+        div.innerHTML = contador;
+    });
+</script>

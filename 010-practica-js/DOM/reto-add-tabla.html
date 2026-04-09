@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto DOM Tabla</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 20px;
+        }
+        th {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    TAREA:
+    1.- Crear un html con una tabla de dos columnas: nombre, apellido.
+    2.- En la tabla hay tres filas.
+    3.- Con JavaScript hay que añadir una nueva fila.
+    OJO! Hay que:
+    1.- Crear un <tr>
+    2.- Crear dos <td> en insertarlos en la <tr>.
+    3.- Insertar el <tr> al final de la tabla.
+    -->
+    <table id="tabla">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>Pérez</td>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>García</td>
+        </tr>
+        <tr>
+            <td>Pedro</td>
+            <td>López</td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+
+// Crear un <tr>
+const nuevaFila = document.createElement('tr');
+// Crear dos <td> en insertarlos en la <tr>.
+const tdNombre = document.createElement('td');
+tdNombre.textContent = 'María';
+const tdApellido = document.createElement('td');
+tdApellido.textContent = 'Martínez';
+nuevaFila.appendChild(tdNombre);
+nuevaFila.appendChild(tdApellido);
+// Insertar el <tr> al final de la tabla.
+const tabla = document.getElementById('tabla');
+tabla.appendChild(nuevaFila);
+
+</script>
