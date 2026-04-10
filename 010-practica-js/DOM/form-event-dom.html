@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular un formulario usando DOM</title>
+</head>
+<body>
+    <h1>Manipulación de formulario via JavaScript</h1>
+    <form id="my-form" method="post">
+        <input type="text" name="username" placeholder="User name">
+        <input type="submit" value="Send!">
+    </form>
+
+</body>
+</html>
+
+<script>
+    // e = event
+const formEl = document.getElementById('my-form');
+console.log(formEl);
+formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log("In fuction...", e);
+    let formValues = e.target;
+    console.log("Form values", formValues); 
+    console.log(typeof formValues);
+    console.log("Form values: ", formValues.username.value);
+});
+</script>

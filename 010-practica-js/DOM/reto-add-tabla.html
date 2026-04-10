@@ -44,6 +44,10 @@
             <td>López</td>
         </tr>
     </table>
+
+    
+   
+
 </body>
 </html>
 <script>
@@ -55,10 +59,12 @@ const tdNombre = document.createElement('td');
 tdNombre.textContent = 'María';
 const tdApellido = document.createElement('td');
 tdApellido.textContent = 'Martínez';
-nuevaFila.appendChild(tdNombre);
-nuevaFila.appendChild(tdApellido);
+nuevaFila.append(tdNombre);
+nuevaFila.append(tdApellido);
 // Insertar el <tr> al final de la tabla.
 const tabla = document.getElementById('tabla');
-tabla.appendChild(nuevaFila);
+debugger;
+tabla.append(nuevaFila);
+
 
 </script>
