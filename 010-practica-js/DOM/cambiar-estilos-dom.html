@@ -1,0 +1,50 @@
+
+
+<!--La tarea es escribir un fichero HTML que contenga un input de tipo number y dos botones uno con un mas y otro un menos  
+el campo del imput empezara con el numero 5 si le das al menos ira restando un numero al resultado del campo input y si le das al mas sumando 1
+bonus track si llega al 0 que el border se ponga rojo si el contador llega a 10 se ponga verde. Si vuelve dentro del rango entre 0 y 10, el color sea negro. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma y resta cambiando estilos DOM</title>
+</head>
+
+<body>
+    <input id="resultado" type="number" value="5">
+    <button id="suma">+</button>
+    <button id="resta">-</button>
+</body>
+
+</html>
+
+<script>
+    const resultadoEl = document.getElementById("resultado"); //Llamamos al elemento por su id suma y resta
+    const sumaEl = document.getElementById("suma");
+    const restaEl = document.getElementById("resta");
+
+    sumaEl.addEventListener("click", () => {  // Capturamos el botón de sumar
+        resultadoEl.value = Number(resultadoEl.value) + 1;
+        actualizarColor();      //Llamamos a la función para que verifique si se colorea el borde con el color 
+    });
+    restaEl.addEventListener("click", () => {  //Capturamos el botón de restar
+
+        resultadoEl.value = Number(resultadoEl.value) - 1;
+        actualizarColor();      //Llamamos a la función para que verifique si se colorea el borde con el color 
+    })
+    function actualizarColor() {
+        const valor = Number(resultadoEl.value)   //Actualizar color para saber cuánto vale y si es mayor que 10 sea verde, 
+        if (valor < 0) {                        // si es menor que cero sea rojo. Si vuelve a cero o a 10 es negro.
+            resultadoEl.style.border = "2px solid red";
+
+        } else if (valor > 10) {
+
+            resultadoEl.style.border = "2px solid green";
+        }
+
+        else resultadoEl.style.border = "2px solid black";
+    }
+</script>
