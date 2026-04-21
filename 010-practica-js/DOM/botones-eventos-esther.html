@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones Eventos</title>
+    <style>
+
+        div {
+            background-color: pink;
+            padding: 20px;
+        }
+
+        button {
+            background-color: grey;
+            color: white;
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--
+    un contenedor de color rosa de fondo y 3 botones dentro de color gris.
+    al pulsar uno de los botones este se pondrá de color verde y los otros dos de color gris. 
+    si pulsamos sobre el fondo rosa los 3 se ponen en gris. el listener debe realizarse en el contenedor.
+    -->
+    <div>
+        <button>Botón 1</button>
+        <button>Botón 2</button>
+        <button>Botón 3</button>
+    </div>
+   
+</body>
+
+</html>
+
+ <script>
+        const container = document.querySelector('div');
+        const buttons = container.querySelectorAll('button');
+
+        container.addEventListener('click', (event) => {
+            if (event.target.tagName === 'BUTTON') {
+                buttons.forEach(button => {
+                    button.style.backgroundColor = 'grey';
+                });
+                event.target.style.backgroundColor = 'green';
+            } else {
+                buttons.forEach(button => {
+                    button.style.backgroundColor = 'grey';
+                });
+            }
+        });
+        
+    </script>
